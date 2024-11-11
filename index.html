@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://em-content.zobj.net/source/whatsapp/401/skull-and-crossbones_2620-fe0f.png">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <script src="https://cdn.jsdelivr.net/gh//Jeremy-Fowler/githubIconAppender/main.js" defer></script>
+  <title>Jungle Jumble</title>
+</head>
+
+<body>
+  <!-- SECTION -->
+  <header class="mb-3">
+    <div class="jumble-card">
+      <h1>Jungle Jumble!</h1>
+    </div>
+  </header>
+
+  <!-- SECTION -->
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <section id="jumble-game" class="col-md-7 mb-3">
+          <!-- Game Form Draws Here -->
+        </section>
+        <section class="col-md-5">
+          <div class="jumble-card">
+            <h2 class="text-center mb-3">Jumbles!</h2>
+            <div id="jumbles-list" class="mb-5">
+              <!-- Jumbles List Draws Here -->
+            </div>
+            <form onsubmit="app.JumblesController.createJumble()">
+              <h4 class="text-center">Create Jumble</h4>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="jumble-name" placeholder="Name" name="name" required>
+                <label for="name">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Jumble Body" id="jumble-body" name="body"
+                  required></textarea>
+                <label for="jumble-body">Jumble</label>
+              </div>
+              <button class="btn btn-warning w-100" type="submit">create <i class="mdi mdi-arrow-right"></i></button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- SECTION -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+
+  <script src="app/App.js" type="module"></script>
+</body>
+
+</html>
